@@ -575,7 +575,7 @@ is that it sets the method to GET and calls `req.end()` automatically.
 
 Example:
 
-    http.get("http://www.google.com/index.html", function(res) {
+    http.get(require("url").parse("http://www.google.com/index.html"), function(res) {
       console.log("Got response: " + res.statusCode);
     }).on('error', function(e) {
       console.log("Got error: " + e.message);
